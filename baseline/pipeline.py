@@ -1,14 +1,23 @@
-import Retriever
-import Generator
+from retriever import Retriever
+from generator import Generator
+from logger import log_query
 
 retriever = Retriever()
-retriever.add_txt_files(["./data/sample_file.txt", "./data/deeplearning.txt"])
-vals = retriever.query("Define NLP?", top_k=7)
-
-retriever.save("retriever_data")
-
-context = "\n\n".join(vals)
+retriever.add_txt_files([".data/sample_file.txt"])
 
 generator = Generator()
-answer = generator.generate_answer(context, "Define NLP?")
-print(answer)
+
+def run_pipeline(question, group_id="demo-group"):
+    retrieved_chunks = retriever.query(question, top_k=3)
+    context = " ".join(retrieved_chunks)
+    answer = generator.generate_answer(context, question)
+
+    log_query({
+        "group_id": group_id,
+        "question": question,
+        "retrieved_chunks": retrieved_chunks,
+        "prompt": generator.build_prompt(context, question),
+        "generated_answer": answer,
+    })
+
+    return answer
