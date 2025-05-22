@@ -7,7 +7,7 @@ retriever.add_txt_files([".data/sample_file.txt"])
 
 generator = Generator()
 
-def run_pipeline(question, group_id="demo-group"):
+def run_pipeline(question, group_id="TeamQuery"):
     retrieved_chunks = retriever.query(question, top_k=3)
     context = " ".join(retrieved_chunks)
     answer = generator.generate_answer(context, question)
