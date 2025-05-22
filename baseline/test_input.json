@@ -1,0 +1,6 @@
+[
+    {
+        "question": "Define NLP?",
+        "expected_answer_keywords": ["natural language generation", "computer science", "artificial intelligence"]
+    }
+]
