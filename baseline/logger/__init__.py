@@ -1,0 +1,1 @@
+# Logger package for the legal assistant project 

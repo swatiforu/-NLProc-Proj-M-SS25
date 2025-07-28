@@ -1,0 +1,1 @@
+# Generator package for the legal assistant project 
