@@ -1,0 +1,7 @@
+PyMuPDF
+sentence-transformers
+faiss-cpu
+transformers
+accelerate
+bitsandbytes
+huggingface_hub
