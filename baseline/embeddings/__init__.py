@@ -1,1 +1,0 @@
-# Embeddings package for the legal assistant project 
