@@ -46,7 +46,7 @@ python runner.py
 
 ## Usage
 
-The legal assistant will load the GDPR document and allow you to ask questions about it. The system will:
+The legal assistant will load the legal document and allow you to ask questions about it. The system will:
 
 1. Retrieve relevant sections from the document
 2. Generate comprehensive answers with specific article references
